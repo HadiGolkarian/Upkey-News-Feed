@@ -2,13 +2,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
-import { InMemoryDataService } from './dataServices/in-memory-data.service';
+import { InMemoryData } from './dataServices/base/in-memory-data';
+import { UsersDataService } from './dataServices/users/users-data.service';
 
 @NgModule({
   imports: [
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryData),
   ],
-  providers: [],
+  providers: [UsersDataService],
 })
 export class CoreModule {}
