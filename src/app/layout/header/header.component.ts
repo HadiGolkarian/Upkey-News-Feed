@@ -8,5 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   constructor() {}
 
+  handleUpgradeClick(): void {
+    // TODO
+    console.log('open upgrade panel');
+  }
+
   ngOnInit(): void {}
 }
