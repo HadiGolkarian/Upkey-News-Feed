@@ -5,6 +5,7 @@ import { AvatarComponent } from './avatar/avatar.component';
 import { ButtonComponent } from './button/button.component';
 
 @NgModule({
+  imports: [CommonModule],
   declarations: [AvatarComponent, ButtonComponent],
   exports: [CommonModule, AvatarComponent, ButtonComponent],
 })

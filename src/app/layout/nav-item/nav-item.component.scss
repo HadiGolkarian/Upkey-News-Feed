@@ -1,0 +1,18 @@
+@import "../../../variables";
+
+.wrapper {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 150ms;
+  color: $dark-font-color;
+
+  &:hover {
+    background-color: $base-secondary-light-color;
+  }
+}
+
+.title {
+  margin-left: 10px;
+}

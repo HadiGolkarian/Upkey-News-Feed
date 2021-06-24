@@ -5,6 +5,12 @@ export enum AvatarVariants {
   square = 'square',
 }
 
+export enum AvatarSizes {
+  small = 'small',
+  medium = 'medium',
+  large = 'large',
+}
+
 @Component({
   selector: 'app-avatar',
   templateUrl: './avatar.component.html',
@@ -12,10 +18,21 @@ export enum AvatarVariants {
 })
 export class AvatarComponent implements OnInit {
   @Input() imageUrl: string;
-  @Input() imageTitle: string;
+  @Input() imageTitle?: string;
   @Input() variant?: AvatarVariants = AvatarVariants.circle;
+  @Input() size?: AvatarSizes = AvatarSizes.small;
 
   constructor() {}
+
+  getClasses(): any {
+    return {
+      circle: this.variant === AvatarVariants.circle,
+      square: this.variant === AvatarVariants.square,
+      small: this.size === AvatarSizes.small,
+      medium: this.size === AvatarSizes.medium,
+      large: this.size === AvatarSizes.large,
+    };
+  }
 
   ngOnInit(): void {}
 }

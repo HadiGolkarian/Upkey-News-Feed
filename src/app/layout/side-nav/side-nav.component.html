@@ -1,3 +1,5 @@
 <div class="wrapper">
-  <div *ngFor="let user of $users | async">{{user.firstName}}</div>
+  <div *ngFor="let user of $users | async">
+    <app-nav-item [user]="user"></app-nav-item>
+  </div>
 </div>

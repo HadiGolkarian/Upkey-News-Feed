@@ -10,7 +10,7 @@ import { SideNavService } from './side-nav.service';
   providers: [SideNavService],
 })
 export class SideNavComponent implements OnInit {
-  public $users: Observable<User>;
+  public $users: Observable<User[]>;
 
   constructor(private sideNavService: SideNavService) {}
 

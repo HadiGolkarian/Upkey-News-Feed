@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 export class SideNavService {
   constructor(private usersDataService: UsersDataService) {}
 
-  getUsers(): Observable<User> {
+  getUsers(): Observable<User[]> {
     return this.usersDataService.getAll();
   }
 }
