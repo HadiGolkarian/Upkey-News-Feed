@@ -8,7 +8,7 @@
   </a>
 
   <a *ngFor="let user of $users | async"
-     [routerLink]="['user-feed',user.id]">
+     [routerLink]="['user',user.id]">
     <app-nav-item [user]="user"></app-nav-item>
   </a>
 </div>

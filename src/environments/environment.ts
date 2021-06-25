@@ -7,6 +7,7 @@ export const environment = {
   webApiBaseUrl: 'localhost:3000',
   webApiEndPoints: {
     users: 'users',
+    feeds: 'feeds',
   },
 };
 

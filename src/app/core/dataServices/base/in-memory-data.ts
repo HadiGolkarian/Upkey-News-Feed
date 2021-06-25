@@ -1,39 +1,16 @@
+import { Feed } from '@abstractions/feeds/feed.model';
 import { User } from '@abstractions/users/user.model';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import * as faker from 'faker';
-
+import users from './users.fake';
+import feeds from './feed.fake';
 export class InMemoryData implements InMemoryDbService {
   constructor() {}
 
-  createDb(): { users: User[] } {
-    // ----------------------------------------
-    // create fake user Ids
-    const userIds = [];
-    for (let i = 0; i < 10; i++) {
-      userIds.push(i);
-    }
-    // create fake users
-    const users = userIds.map((id) => ({
-      id,
-      firstName: faker.name.firstName(),
-      lastName: faker.name.lastName(),
-      profileImageUrl: faker.image.avatar(),
-    }));
+  randomIntFromTo(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
 
-    // ----------------------------------------
-    // create fake feed Ids
-    // const feedIds = [];
-    // for (let i = 0; i < 100; i++) {
-    //   feedIds.push(i);
-    // }
-    // // create fake users
-    // const feeds = feedIds.map((id) => ({
-    //   id,
-    //   firstName: faker.name.firstName(),
-    //   lastName: faker.name.lastName(),
-    //   profileImageUrl: faker.image.avatar(),
-    // }));
-
-    return { users };
+  createDb(): { users: User[]; feeds: Feed[] } {
+    return { users, feeds };
   }
 }
