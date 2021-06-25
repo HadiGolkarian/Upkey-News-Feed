@@ -6,6 +6,13 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
+    children: [
+      {
+        path: 'user-feed',
+        loadChildren: () =>
+          import('../feed/feed.module').then((m) => m.FeedModule),
+      },
+    ],
   },
 ];
 
