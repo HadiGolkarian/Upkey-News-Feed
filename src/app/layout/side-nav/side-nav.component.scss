@@ -6,8 +6,25 @@
   background-color: $base-primary-light-color;
 }
 
+.title {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &:hover {
+    background-color: $base-secondary-light-color;
+  }
+}
+
 @media only screen and (max-width: $break-ponit-m) {
   .wrapper {
-    width: 65px;
+    width: 60px;
+  }
+
+  .title {
+    h2 {
+      display: none;
+    }
   }
 }

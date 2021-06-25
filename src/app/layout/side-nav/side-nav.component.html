@@ -1,4 +1,12 @@
 <div class="wrapper">
+  <a class="title"
+     routerLink="/">
+    <h2>News Feed</h2>
+    <app-avatar imageUrl="/assets/images/logo.png"
+                variant="square"></app-avatar>
+
+  </a>
+
   <div *ngFor="let user of $users | async">
     <app-nav-item [user]="user"></app-nav-item>
   </div>
