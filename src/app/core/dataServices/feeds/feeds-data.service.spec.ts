@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FeedsService } from './feeds.service';
+import { FeedsDataService } from './feeds-data.service';
 
-describe('FeedsService', () => {
-  let service: FeedsService;
+describe('FeedsDataService', () => {
+  let service: FeedsDataService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(FeedsService);
+    service = TestBed.inject(FeedsDataService);
   });
 
   it('should be created', () => {

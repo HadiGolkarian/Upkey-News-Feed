@@ -7,7 +7,7 @@ import { BaseData } from './../base/base-data';
 @Injectable({
   providedIn: 'root',
 })
-export class FeedsService extends BaseData<Feed> {
+export class FeedsDataService extends BaseData<Feed> {
   constructor(httpClient: HttpClient) {
     super(environment.webApiEndPoints.feeds, httpClient);
   }
