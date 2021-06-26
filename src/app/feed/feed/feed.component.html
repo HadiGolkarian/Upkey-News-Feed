@@ -7,4 +7,12 @@
          [alt]="feed.type">
   </div>
 
+  <div class="title-wrapper">
+    <h1 class="title">{{feed.title}}</h1>
+    <strong>{{feed.createdAt | date:'medium'}}</strong>
+  </div>
+
+  <div>
+    <p class="content">{{feed.description}}</p>
+  </div>
 </div>

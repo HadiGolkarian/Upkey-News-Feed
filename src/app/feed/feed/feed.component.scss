@@ -2,6 +2,8 @@
 
 .wrapper {
   display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
 }
 
 .cover-wrapper {
@@ -9,10 +11,20 @@
   flex: 1;
 }
 
+.title {
+  margin-bottom: 10px;
+}
+
+.content {
+  font-family: $base-font-family;
+  text-align: justify;
+}
+
 .cover {
   max-height: 400px;
   object-fit: cover;
-  margin: 20px;
+  width: 100%;
+  min-height: 200px;
   box-sizing: border-box;
   flex: 1;
   border-radius: $border-ratio;

@@ -5,6 +5,8 @@ export class Feed {
   constructor(
     public id: number,
     public createdAt: Date,
+    public title: string,
+    public description: string,
     public type: FeedType,
     public ownerId: number,
     public owner: User,

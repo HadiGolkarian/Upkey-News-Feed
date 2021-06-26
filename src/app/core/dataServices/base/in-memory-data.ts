@@ -49,6 +49,10 @@ export class InMemoryData implements InMemoryDbService {
       return {
         id,
         createdAt: faker.date.past(1),
+        title: faker.lorem.sentence(),
+        description: faker.lorem.paragraphs(
+          this.numberUtils.randomIntFromTo(0, 25)
+        ),
         ownerId: feedOwner,
         owner: users[feedOwner],
         type: feedType,
