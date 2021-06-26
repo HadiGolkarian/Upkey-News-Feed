@@ -12,14 +12,14 @@ export class FeedItemComponent implements OnInit {
 
   constructor() {}
 
-  getFeedDescription(): string {
+  getThumbUrl(): string {
     switch (this.feed.type) {
       case FeedType.addedFriend:
-        return `${this.feed.owner.firstName} ${this.feed.owner.lastName} added ${this.feed.subject.firstName} ${this.feed.subject.lastName} as a firend.`;
+        return this.feed.subject.profileImageUrl;
       case FeedType.like:
-        return `${this.feed.owner.firstName} ${this.feed.owner.lastName} liked ${this.feed.subject.firstName} ${this.feed.subject.lastName} post.`;
+        return this.feed.thumbUrl;
       case FeedType.upload:
-        return `${this.feed.owner.firstName} ${this.feed.owner.lastName} uploaded a new image.`;
+        return this.feed.uploadedPhotoThumbUrl;
       default:
         return '';
     }

@@ -12,6 +12,7 @@ export class Feed {
     public subject: User,
     public coverUrl: string,
     public thumbUrl: string,
-    public uploadedPhotoUrl?: string
+    public uploadedPhotoUrl?: string,
+    public uploadedPhotoThumbUrl?: string
   ) {}
 }

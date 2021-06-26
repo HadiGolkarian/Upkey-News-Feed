@@ -58,7 +58,11 @@ export class InMemoryData implements InMemoryDbService {
         thumbUrl: faker.image.imageUrl(100, 100, null, true),
         uploadedPhotoUrl:
           feedType === FeedType.upload
-            ? faker.image.imageUrl(600, 400, null, true)
+            ? faker.image.imageUrl(600, 400, 'abstrat', true)
+            : null,
+        uploadedPhotoThumbUrl:
+          feedType === FeedType.upload
+            ? faker.image.imageUrl(100, 100, 'abstrat', true)
             : null,
       };
     });
