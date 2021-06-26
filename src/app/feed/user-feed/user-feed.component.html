@@ -1,5 +1,12 @@
-<div class="feed-list-wrapper">
-  <div *ngFor="let feed of $feeds | async">
-    <app-feed-item [feed]="feed"></app-feed-item>
+<div class="wrapper">
+  <div class="feed-list-wrapper">
+    <div *ngFor="let feed of $feeds | async">
+      <app-feed-item [feed]="feed"></app-feed-item>
+    </div>
   </div>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+
 </div>

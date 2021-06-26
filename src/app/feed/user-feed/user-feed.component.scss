@@ -1,5 +1,10 @@
 @import "../../../variables";
 
+.wrapper {
+  display: flex;
+  height: 100%;
+}
+
 .feed-list-wrapper {
   max-width: 500px;
   height: 100%;
