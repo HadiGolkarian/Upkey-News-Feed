@@ -22,7 +22,10 @@
         </ng-container>
       </small>
 
-      <app-date-time [date]="feed.createdAt"></app-date-time>
+      <app-date-time [date]="feed.createdAt">
+        <small>{{feed.createdAt | date:'medium'}}</small>
+      </app-date-time>
+
     </div>
 
     <p class="title"

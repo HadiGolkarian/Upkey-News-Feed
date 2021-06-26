@@ -1,0 +1,16 @@
+@import "../../../variables";
+
+.wrapper {
+  position: relative;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background: $base-primary-color;
+  padding: 5px 10px;
+  border-radius: $border-ratio;
+  display: flex;
+  white-space: nowrap;
+}

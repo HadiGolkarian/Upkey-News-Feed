@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-date-time',
@@ -6,7 +12,16 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./date-time.component.scss'],
 })
 export class DateTimeComponent implements OnInit {
+  public hovered = false;
+
   @Input() date: Date;
+  @HostListener('mouseover') mouseOver(): void {
+    this.hovered = true;
+  }
+  @HostListener('mouseout') mouseOut(): void {
+    this.hovered = false;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

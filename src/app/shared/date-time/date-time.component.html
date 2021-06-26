@@ -1,1 +1,9 @@
-<small>{{date | timeAgo}}</small>
+<div class="wrapper">
+  <small>{{date | timeAgo}}</small>
+
+  <div class="content-wrapper"
+       *ngIf="hovered">
+    <ng-content></ng-content>
+  </div>
+
+</div>
