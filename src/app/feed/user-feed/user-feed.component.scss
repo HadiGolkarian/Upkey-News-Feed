@@ -11,6 +11,10 @@
   border-right: 1px solid $border-dark;
 }
 
+.feed-content-wrapper {
+  flex: 1;
+}
+
 @media only screen and (max-width: $break-ponit-l) {
   .feed-list-wrapper {
     max-width: 100%;

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    // lazy load feature module
     loadChildren: () =>
       import('./layout/layout.module').then((m) => m.LayoutModule),
   },

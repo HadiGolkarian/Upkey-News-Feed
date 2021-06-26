@@ -1,0 +1,19 @@
+@import "../../../variables";
+
+.wrapper {
+  display: flex;
+}
+
+.cover-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.cover {
+  max-height: 400px;
+  object-fit: cover;
+  margin: 20px;
+  box-sizing: border-box;
+  flex: 1;
+  border-radius: $border-ratio;
+}

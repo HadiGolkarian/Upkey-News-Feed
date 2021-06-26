@@ -1,1 +1,10 @@
-{{$feed|async|json}}
+<div class="wrapper"
+     *ngIf="$feed | async as feed">
+
+  <div class="cover-wrapper">
+    <img class="cover"
+         [src]="feed.coverUrl"
+         [alt]="feed.type">
+  </div>
+
+</div>
