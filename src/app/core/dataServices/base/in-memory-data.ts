@@ -54,6 +54,7 @@ export class InMemoryData implements InMemoryDbService {
           this.numberUtils.randomIntFromTo(0, 25)
         ),
         ownerId: feedOwner,
+        isBookmarked: false,
         owner: users[feedOwner],
         type: feedType,
         subjectId: feedSubject,

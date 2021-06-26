@@ -47,5 +47,20 @@
 
   <div class="icon-wrapper">
     <i [class]="getIconClass()"></i>
+
+    <button (click)="handleBookmark($event, true)"
+            *ngIf="!feed.isBookmarked else isBookmarkedIcon"
+            class="bookmark-button">
+      <i class="far fa-bookmark"></i>
+    </button>
+
+    <ng-template #isBookmarkedIcon>
+      <button (click)="handleBookmark($event,false)"
+              *ngIf="!feed.isBookmarked else isBookmarkedIcon"
+              class="bookmark-button">
+        <i class="fas fa-bookmark"></i>
+      </button>
+    </ng-template>
+
   </div>
 </a>

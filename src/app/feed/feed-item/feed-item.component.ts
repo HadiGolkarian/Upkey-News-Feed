@@ -12,6 +12,11 @@ export class FeedItemComponent implements OnInit {
 
   constructor() {}
 
+  handleBookmark(e, bookmakred: boolean): void {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
   getThumbUrl(): string {
     switch (this.feed.type) {
       case FeedType.addedFriend:

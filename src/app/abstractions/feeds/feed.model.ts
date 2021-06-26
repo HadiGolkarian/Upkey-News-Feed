@@ -6,6 +6,7 @@ export class Feed {
     public id: number,
     public createdAt: Date,
     public title: string,
+    public isBookmarked: boolean,
     public description: string,
     public type: FeedType,
     public ownerId: number,
