@@ -56,7 +56,6 @@
 
     <ng-template #isBookmarkedIcon>
       <button (click)="handleBookmark($event,false)"
-              *ngIf="!feed.isBookmarked else isBookmarkedIcon"
               class="bookmark-button">
         <i class="fas fa-bookmark"></i>
       </button>

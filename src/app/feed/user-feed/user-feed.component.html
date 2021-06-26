@@ -1,7 +1,8 @@
 <div class="wrapper">
   <div class="feed-list-wrapper">
-    <div *ngFor="let feed of $feeds | async">
-      <app-feed-item [feed]="feed"></app-feed-item>
+    <div *ngFor="let feed of feeds">
+      <app-feed-item [feed]="feed"
+                     (bookmakred)="handleBookmarkChane($event)"></app-feed-item>
     </div>
   </div>
 

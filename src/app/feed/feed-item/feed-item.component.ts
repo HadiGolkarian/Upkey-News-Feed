@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FeedType } from '@app/abstractions/feeds/feed-type.enum';
 import { Feed } from '@app/abstractions/feeds/feed.model';
 
@@ -9,12 +9,15 @@ import { Feed } from '@app/abstractions/feeds/feed.model';
 })
 export class FeedItemComponent implements OnInit {
   @Input() feed: Feed;
+  @Output() bookmakred: EventEmitter<{ feed: Feed; bookmakred: boolean }> =
+    new EventEmitter();
 
   constructor() {}
 
   handleBookmark(e, bookmakred: boolean): void {
     e.preventDefault();
     e.stopPropagation();
+    this.bookmakred.emit({ feed: this.feed, bookmakred });
   }
 
   getThumbUrl(): string {

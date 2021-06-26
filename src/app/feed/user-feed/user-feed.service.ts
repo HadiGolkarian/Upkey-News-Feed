@@ -16,4 +16,11 @@ export class UserFeedService {
       },
     });
   }
+
+  updateBookmarkStatus(feed: Feed, bookmakred: boolean): Observable<Feed> {
+    return this.feedsDataService.update(feed.id.toString(), {
+      ...feed,
+      isBookmarked: bookmakred,
+    });
+  }
 }

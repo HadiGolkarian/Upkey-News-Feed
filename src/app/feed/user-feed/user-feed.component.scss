@@ -21,3 +21,9 @@
     border-right: none;
   }
 }
+
+@media only screen and (max-width: $break-ponit-l) {
+  .feed-content-wrapper {
+    display: none;
+  }
+}
