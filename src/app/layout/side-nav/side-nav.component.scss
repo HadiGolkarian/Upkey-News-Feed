@@ -7,10 +7,13 @@
 }
 
 .title {
+  box-sizing: border-box;
   padding: 5px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  border-bottom: 1px solid $border-dark;
 
   &:hover {
     background-color: $base-secondary-light-color;
