@@ -14,7 +14,7 @@ export interface GetAllOptions {
 export class BaseData<T> {
   constructor(private endPoint: string, private http: HttpClient) {}
 
-  getOne(id: number): Observable<T> {
+  getOne(id: string): Observable<T> {
     return this.http.get<T>(
       `${environment.webApiBaseUrl}/${this.endPoint}/${id}`
     );
@@ -33,14 +33,14 @@ export class BaseData<T> {
     );
   }
 
-  update(id: number, data: Partial<T>): Observable<T> {
+  update(id: string, data: Partial<T>): Observable<T> {
     return this.http.put<T>(
       `${environment.webApiBaseUrl}/${this.endPoint}/${id}`,
       data
     );
   }
 
-  delete(id: number): Observable<T> {
+  delete(id: string): Observable<T> {
     return this.http.delete<T>(
       `${environment.webApiBaseUrl}/${this.endPoint}/${id}`
     );
