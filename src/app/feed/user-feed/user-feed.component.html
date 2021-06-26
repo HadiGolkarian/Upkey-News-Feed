@@ -1,3 +1,3 @@
-<p>user-feed works!</p>
-
-{{$feeds | async | json}}
+<div *ngFor="let feed of $feeds | async">
+  <app-feed-item [feed]="feed"></app-feed-item>
+</div>
