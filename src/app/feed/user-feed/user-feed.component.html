@@ -1,3 +1,5 @@
-<div *ngFor="let feed of $feeds | async">
-  <app-feed-item [feed]="feed"></app-feed-item>
+<div class="feed-list-wrapper">
+  <div *ngFor="let feed of $feeds | async">
+    <app-feed-item [feed]="feed"></app-feed-item>
+  </div>
 </div>

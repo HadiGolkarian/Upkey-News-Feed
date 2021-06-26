@@ -1,0 +1,14 @@
+@import "../../../variables";
+
+.feed-list-wrapper {
+  max-width: 500px;
+  height: 100%;
+  border-right: 1px solid $border-dark;
+}
+
+@media only screen and (max-width: $break-ponit-l) {
+  .feed-list-wrapper {
+    max-width: 100%;
+    border-right: none;
+  }
+}

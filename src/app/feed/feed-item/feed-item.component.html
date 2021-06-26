@@ -1,4 +1,12 @@
-<app-avatar [imageUrl]="feed.thumbUrl"
-            size="medium"
-            variant="square"></app-avatar>
-<p>{{feed.owner.firstName}} {{feed.type}} {{feed.subject.firstName}} </p>
+<a class="wrapper"
+   [routerLink]="['feed',feed.id]">
+  <app-avatar [imageUrl]="feed.thumbUrl"
+              size="medium"
+              variant="square"></app-avatar>
+  <div class="title-wrapper">
+    <p class="title">{{getFeedDescription()}}</p>
+  </div>
+  <div class="icon-wrapper">
+    <i [class]="getIconClass()"></i>
+  </div>
+</a>
