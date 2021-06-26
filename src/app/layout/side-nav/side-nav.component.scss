@@ -29,6 +29,25 @@
   }
 }
 
+.all {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid $border-darker;
+  border-left: none;
+  border-right: none;
+
+  i {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    width: 50px;
+    height: 50px;
+  }
+}
+
 
 
 @media only screen and (max-width: $break-ponit-m) {

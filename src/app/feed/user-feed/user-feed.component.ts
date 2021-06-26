@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UserFeedService } from './user-feed.service';
-import { catchError, switchMap, tap } from 'rxjs/operators';
-import { Observable, of } from 'rxjs';
 import { Feed } from '@app/abstractions/feeds/feed.model';
+import { of } from 'rxjs';
+import { catchError, switchMap, tap } from 'rxjs/operators';
+import { UserFeedService } from './user-feed.service';
 @Component({
   selector: 'app-user-feed',
   templateUrl: './user-feed.component.html',
@@ -20,7 +20,7 @@ export class UserFeedComponent implements OnInit {
 
   handleBookmarkChane(e: { feed: Feed; bookmakred: boolean }): void {
     this.userFeedService
-      .updateBookmarkStatus(e.feed, true)
+      .updateBookmarkStatus(e.feed, e.bookmakred)
       .pipe(
         catchError((err) => {
           return of('an error has occurred');
@@ -30,7 +30,7 @@ export class UserFeedComponent implements OnInit {
         const updatedIndex = this.feeds.findIndex(
           (feed) => feed.id === e.feed.id
         );
-        // update just locally cuase in memory api does not change the data
+        // update locally
         this.feeds[updatedIndex].isBookmarked = e.bookmakred;
       });
   }

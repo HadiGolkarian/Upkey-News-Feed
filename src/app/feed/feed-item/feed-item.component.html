@@ -33,7 +33,7 @@
        [ngSwitch]="feed.type">
       <ng-container *ngSwitchCase="'addedFriend'">
         <b>{{this.feed.owner.firstName}} {{this.feed.owner.lastName}}</b> added <b>{{this.feed.subject.firstName}}
-          {{this.feed.subject.lastName}}</b> as a firend.
+          {{this.feed.subject.lastName}}</b> as a friend.
       </ng-container>
       <ng-container *ngSwitchCase="'like'">
         <b>{{this.feed.owner.firstName}} {{this.feed.owner.lastName}}</b> liked <b>{{this.feed.subject.firstName}}

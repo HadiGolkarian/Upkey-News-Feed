@@ -72,8 +72,6 @@ export class InMemoryData implements InMemoryDbService {
       };
     });
 
-    console.log(users, feeds);
-
     return { users, feeds };
   }
 }

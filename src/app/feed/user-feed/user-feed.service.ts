@@ -10,11 +10,17 @@ export class UserFeedService {
   constructor(private feedsDataService: FeedsDataService) {}
 
   getUserFeeds(userId: string): Observable<Feed[]> {
-    return this.feedsDataService.getAll({
-      params: {
+    const options = {
+      params: {},
+    };
+
+    if (userId !== 'all') {
+      options.params = {
         ownerId: userId,
-      },
-    });
+      };
+    }
+
+    return this.feedsDataService.getAll(options);
   }
 
   updateBookmarkStatus(feed: Feed, bookmakred: boolean): Observable<Feed> {
