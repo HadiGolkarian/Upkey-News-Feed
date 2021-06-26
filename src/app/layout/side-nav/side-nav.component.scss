@@ -14,11 +14,22 @@
   align-items: center;
   justify-content: space-evenly;
   border-bottom: 1px solid $border-darker;
+}
+
+.nav-link {
+  display: block;
 
   &:hover {
     background-color: $base-secondary-light-color;
   }
+
+  &.active-nave-item,
+  &.active-nave-item:hover {
+    background-color: $base-primary-color !important;
+  }
 }
+
+
 
 @media only screen and (max-width: $break-ponit-m) {
   .wrapper {
