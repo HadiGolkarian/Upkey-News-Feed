@@ -6,6 +6,25 @@
               variant="square"></app-avatar>
 
   <div class="title-wrapper">
+
+
+    <div class="date-wrapper">
+      <small [ngSwitch]="feed.type"
+             class="feed-type-title">
+        <ng-container *ngSwitchCase="'addedFriend'">
+          New friend
+        </ng-container>
+        <ng-container *ngSwitchCase="'like'">
+          New post
+        </ng-container>
+        <ng-container *ngSwitchCase="'upload'">
+          New image
+        </ng-container>
+      </small>
+
+      <app-date-time [date]="feed.createdAt"></app-date-time>
+    </div>
+
     <p class="title"
        [ngSwitch]="feed.type">
       <ng-container *ngSwitchCase="'addedFriend'">
