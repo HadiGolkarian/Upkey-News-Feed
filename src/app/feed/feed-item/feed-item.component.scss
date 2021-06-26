@@ -10,6 +10,11 @@
   &:hover {
     background-color: $base-secondary-light-color;
   }
+
+  &.active-feed-item,
+  &.active-feed-item:hover {
+    background-color: $base-primary-color !important;
+  }
 }
 
 .title-wrapper {
